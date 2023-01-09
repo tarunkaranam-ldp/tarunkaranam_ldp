@@ -1,2 +1,1 @@
-this is the tex1 file
-tex1 is changed
+this is tex1
