@@ -6,6 +6,6 @@ public class App {
         String s = en.encode(msg);
         String o = en.decode(s);
         System.out.println(s);
-        System.out.println(o);
+        System.out.println(o);//edited assignment
     }
 }
