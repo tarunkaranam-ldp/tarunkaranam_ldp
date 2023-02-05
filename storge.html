@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    // Function to increment and display the local score
+    function incrementLocal() {
+      if (localStorage.getItem("localScore")) {
+        localStorage.setItem("localScore", Number(localStorage.getItem("localScore")) + 1);
+      } else {
+        localStorage.setItem("localScore", 1);
+      }
+      document.getElementById("local").innerHTML = localStorage.getItem("localScore");
+    }
+
+    // Function to increment and display the session score
+    function incrementSession() {
+      if (sessionStorage.getItem("sessionScore")) {
+        sessionStorage.setItem("sessionScore", Number(sessionStorage.getItem("sessionScore")) + 1);
+      } else {
+        sessionStorage.setItem("sessionScore", 1);
+      }
+      document.getElementById("session").innerHTML = sessionStorage.getItem("sessionScore");
+    }
+  </script>
+</head>
+<body onload="document.getElementById('local').innerHTML = localStorage.getItem('localScore');
+  document.getElementById('session').innerHTML = sessionStorage.getItem('sessionScore');">
+  <p>Local Score: <span id="local"></span></p>
+  <button onclick="incrementLocal()">Increment Local Score</button><br><br>
+  <p>Session Score: <span id="session"></span></p>
+  <button onclick="incrementSession()">Increment Session Score</button>
+</body>
+</html>
